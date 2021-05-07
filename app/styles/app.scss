@@ -1,0 +1,16 @@
+
+@import "ember-bootstrap/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');    
+h1,.tf{
+    font-family: 'Bebas Neue', cursive;
+}
+
+.nav-link:hover{
+    // background-color: bisque;
+    border-bottom: 2px solid bisque;
+    border-radius: 10%;
+    color: black;
+}
+.card{
+    width: 18rem;
+}
