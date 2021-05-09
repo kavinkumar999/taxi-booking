@@ -1,7 +1,7 @@
 
 @import "ember-bootstrap/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');    
-h1,.tf{
+h1,h2,.tf{
     font-family: 'Bebas Neue', cursive;
 }
 
@@ -12,5 +12,9 @@ h1,.tf{
     color: black;
 }
 .card{
-    width: 18rem;
+    width: 15rem;
+    text-align: center;
+}
+.footer{
+    background-color: rgba(0, 0, 0, 0.2);
 }

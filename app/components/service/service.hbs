@@ -1,14 +1,18 @@
 <div class="service mt-5" id="service">
-    <h1 class="text-warning text-center">Welcome</h1>
-    <h1 class="text-dark display-4 text-center">Our Services</h1>
-    <div class="container-fluid d-flex justify-content-around  mt-5">
+    <h1 class="text-warning text-center">{{@titlemessage}}</h1>
+    <h1 class="text-dark display-4 text-center">{{@service}}</h1>
+    <div class="container d-flex justify-content-between  mt-5">
         <div class="card">
             <div class="imageclass text-center " width="100px">
                 <span class=""><i class="fa fa-random fa-3x"></i></span>
             </div>
             <div class="card-body">
-                <h5 class="card-title">RAPID CITY TRANSFER</h5>
-                <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim autem provident aspernatur corrupti sequi quod quibusdam laudantium eligendi eveniet doloremque! Vero velit et similique nulla necessitatibus magnam eius blanditiis quis.</p>
+                                                       
+                <h2 class=" fw-bold">{{@card1}}</h2>
+                <p class="card-text">{{@content}}</p>
+            </div>
+            <div>
+                <h1>{{@price1}}</h1>
             </div>
         </div>
         <div class="card">
@@ -16,8 +20,11 @@
                 <span class=""><i class="fa fa-hotel fa-3x"></i></span>
             </div>
             <div class="card-body">
-                <h5 class="card-title">BOOKING A HOTEL</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum enim fugit veritatis ipsam ad nobis? Inventore totam eligendi debitis! Excepturi neque corporis et voluptates qui, nam quam dolor placeat laboriosam.</p>
+                <h2 class="card-title">{{@card2}}</h2>
+                <p class="card-text">{{@content}}</p>
+            </div>
+            <div>
+                    <h1>{{@price2}}</h1>
             </div>
         </div>
         <div class="card">
@@ -25,8 +32,11 @@
                 <span class=""><i class="fa fa-plane fa-3x"></i></span>
             </div>
             <div class="card-body">
-                <h5 class="card-title">AIRPORT TRANSFER</h5>
-                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ab magnam nesciunt minima praesentium ad quos blanditiis non? Ea doloremque molestiae suscipit iste ex est tempore magnam eum eveniet neque.</p>
+                <h2 class="card-title"> {{@card3}}</h2>
+                <p class="card-text">{{@content}}</p>
+            </div>
+            <div>
+                    <h1>{{@price3}}</h1>
             </div>
         </div>
         <div class="card">
@@ -34,8 +44,11 @@
                 <span class=""><i class="fa fa-suitcase fa-3x"></i></span>
             </div>
             <div class="card-body">
-                <h5 class="card-title">BAGGAGE TRANSPORT</h5>
-                <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa a itaque beatae blanditiis. Deserunt consequatur, facere ipsam rem placeat aperiam, fuga sunt dolore reprehenderit unde doloremque libero quia nesciunt temporibus!</p>
+                <h2 class="card-title">{{@card4}}</h2>
+                <p class="card-text">{{@content}}</p>
+            </div>
+            <div>
+                    <h1>{{@price4}}</h1>
             </div>
         </div>
 

@@ -1,0 +1,28 @@
+{{page-title "Book"}}
+<Book::Title @title="Book a ride"></Book::Title>
+<Book::Carlist 
+@image0="car/normal.png"
+@image1="car/it.png"
+@image2="car/vip.png"
+@image3="car/mini.png"
+>
+
+</Book::Carlist>
+
+<hr>
+<Service::Service
+ @titlemessage="See our "
+ @service="Tariffs"
+ @card1="STANDARD" 
+ @card2="BUSINESS" 
+ @card3="VIP"
+ @card4="BUS-MINIVAN"
+ @content="Lorem ipsum dolor sit amet consectetur adipisicing elit. "
+ @price1="$2/KM"
+ @price2="$4/KM"
+ @price3="$5/KM"
+ @price4="$4.5/KM"
+
+></Service::Service>
+<Footer::Footer></Footer::Footer>
+{{outlet}}
