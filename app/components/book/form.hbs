@@ -1,7 +1,56 @@
-<select class="form-select" aria-label="Default select example">
-  <option selected>Open this select menu</option>
-  <option value="A">A</option>
-  <option value="B">B</option>
-  <option value="C">C</option>
-</select>
+<div class="rideform container mt-5">
+
+<form>
+  <div class="form-row">
+    <div class="col-md-6 mb-2">
+      <label for="fromcity ">From area</label>
+      <select class="form-select ml-3"  id="fromcity" required>
+        <option selected>Select city</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="tocity">To area</label>
+      <select class="form-select ml-3"  id="tocity">
+        <option selected>Select city</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-6 mb-2">
+      <label for="date">Pick Date</label>
+      <input  class="ml-3" type="date" id="date" required>
+
+    </div>
+    <div class="col-md-6 mb-2">
+      <label for="time">Pick Date</label>
+      <input class="ml-3" type="time" id="time" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="phoneno">Phone Number</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend3">+91</span>
+        </div>
+        <input type="text" class="form-control " id="phoneno" placeholder="Phone number" aria-describedby="inputGroupPrepend3" required>
+        <div class="invalid-feedback">
+          Please enter the phone.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button text-center">
+    <button class="btn btn-primary " type="submit">Book a Ride</button>
+  </div>
+</form>
 {{yield}}
+</div>

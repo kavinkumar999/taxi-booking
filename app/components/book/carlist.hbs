@@ -1,16 +1,41 @@
 <h1 class="text-center text-primary mt-5">Select you car</h1>
-<div class="container carlist d-flex justify-content-center">
-    <button type="button" class="btn btn-light mr-4" id="img0">
-    <img src="{{@image0}}" alt="img0" width="100px">
-    </button>
-    <button type="button" class="btn btn-light mr-4" id="img1" >
-    <img src="{{@image1}}" alt="img1" width="100px">
-    </button>
-    <button type="button" class="btn btn-light mr-4" id="img2">
-    <img src="{{@image2}}" alt="img2" width="100px">
-    </button>
-    <button type="button" class="btn btn-light" id="img3"> 
-    <img src="{{@image3}}" alt="img3" width="100px">
-    </button>
+<div class="container carlist d-flex justify-content-around">
+    <div class="arrange">
+        <label for="image">
+            <img src="{{@image0}}" alt="img0" width="100px">
+        </label>
+        <div class="form-check text-center">
+            <input class="input-hidden position-static" type="radio" name="image" id="image" value="option1" checked required>
+        </div>
+    </div>
+    <div class="arrange">
+
+        <label for="image1">
+            <img src="{{@image1}}" alt="img1" width="100px">
+
+        </label>
+        <div class="form-check text-center">
+            <input class="form-check-input position-static" type="radio" name="image" id="image1" value="option1" required>
+        </div>
+    </div>
+    <div class="arrange">
+
+        <label for="image2">
+            <img src="{{@image2}}" alt="img2" width="100px">
+        </label>
+        <div class="form-check text-center">
+            <input class="form-check-input position-static" type="radio" name="image" id="image2" value="option1" required>
+        </div>
+    </div>
+    <div class="arrange">
+        <label for="image3">
+            <img src="{{@image3}}" alt="img3" width="100px">
+        </label>
+        <div class="form-check text-center">
+            <input class="form-check-input position-static" type="radio" name="image" id="image3" value="option1" required>
+        </div>
+    </div>
+
+
 </div>
 {{yield}}

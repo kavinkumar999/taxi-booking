@@ -18,3 +18,12 @@ h1,h2,.tf{
 .footer{
     background-color: rgba(0, 0, 0, 0.2);
 }
+.btn-1:focus{
+    background-color: yellow;
+}
+input[type=radio]:checked{
+    border: red;
+    background-color: yellowgreen;
+    color: red;
+    
+}
