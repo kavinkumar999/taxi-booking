@@ -16,6 +16,7 @@ export default class BookFormComponent extends Component {
     time.val() == "" ? time.addClass("is-invalid") : time.removeClass("is-invalid")
     if(fromarea.val() != "Select city" && fromarea.val() != "Select city" && phoneno.val() != "" && time.val() != "" && date.val() != "" ){
       //out
+      $(".success").removeClass("d-none")
     }
   }
 }

@@ -61,8 +61,9 @@
     </div>
   </div>
   <div class="button text-center">
-    <button class="btn btn-primary " {{action "validate_form"}} >Book a Ride</button>
+    <button class="btn btn-primary" type="button" {{on "click" this.validate_form}}  >Book a Ride</button>
   </div>
 </form>
+<h1 class="text-success text-center mt-5 d-none success">Hurrah ! Get Ready to Raid </h1>
 {{yield}}
 </div>
