@@ -13,6 +13,9 @@
       <div class="valid-feedback">
         Looks good!
       </div>
+       <div class="invalid-feedback">
+          Please Select from City !
+        </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="tocity">To area</label>
@@ -25,15 +28,24 @@
       <div class="valid-feedback">
         Looks good!
       </div>
+      <div class="invalid-feedback">
+          Please Select to City !
+        </div>
     </div>
     <div class="col-md-6 mb-2">
       <label for="date">Pick Date</label>
       <input  class="ml-3" type="date" id="date" required>
+      <div class="invalid-feedback">
+          Pick a Date to raid !
+        </div>
 
     </div>
     <div class="col-md-6 mb-2">
-      <label for="time">Pick Date</label>
+      <label for="time">Pick Time</label>
       <input class="ml-3" type="time" id="time" required>
+      <div class="invalid-feedback">
+          Pick a Time to raid !
+        </div>
     </div>
     <div class="col-md-4 mb-3">
       <label for="phoneno">Phone Number</label>
@@ -49,7 +61,7 @@
     </div>
   </div>
   <div class="button text-center">
-    <button class="btn btn-primary " type="submit">Book a Ride</button>
+    <button class="btn btn-primary " {{action "validate_form"}} >Book a Ride</button>
   </div>
 </form>
 {{yield}}
