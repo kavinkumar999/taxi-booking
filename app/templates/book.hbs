@@ -8,7 +8,11 @@
 >
 
 </Book::Carlist>
-<Book::Form></Book::Form>
+{{!-- template-lint-disable no-passed-in-event-handlers --}}
+{{!-- template-lint-disable no-action --}}
+<Book::Form
+@onsubmit={{action "validate_form"}}
+></Book::Form>
 <hr>
 <Service::Service
  @home="true"

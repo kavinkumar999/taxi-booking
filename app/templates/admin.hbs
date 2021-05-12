@@ -1,5 +1,8 @@
 {{page-title "Admin"}}
-<Book::Title @title="Total Raid"></Book::Title>
-<Admin::Report></Admin::Report>
+<Book::Title @title="Total Raid" @admin="true"></Book::Title>
+{{!-- template-lint-disable no-implicit-this --}}
+<Admin::Report @result={{model}} ></Admin::Report>
 <Footer::Footer></Footer::Footer>
+
+
 {{outlet}}

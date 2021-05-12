@@ -1,10 +1,10 @@
 <div class="rideform container mt-5">
 
-<form>
+<form onsubmit={{@onsubmit}}>
   <div class="form-row">
     <div class="col-md-6 mb-2">
       <label for="fromcity ">From area</label>
-      <select class="form-select ml-3"  id="fromcity" required>
+      <select class="form-select ml-3"  id="fromcity" >
         <option selected>Select city</option>
         <option value="A">A</option>
         <option value="B">B</option>
@@ -34,7 +34,7 @@
     </div>
     <div class="col-md-6 mb-2">
       <label for="date">Pick Date</label>
-      <input  class="ml-3" type="date" id="date" required>
+      <input  class="ml-3" type="date" id="date" >
       <div class="invalid-feedback">
           Pick a Date to raid !
         </div>
@@ -42,7 +42,7 @@
     </div>
     <div class="col-md-6 mb-2">
       <label for="time">Pick Time</label>
-      <input class="ml-3" type="time" id="time" required>
+      <input class="ml-3" type="time" id="time" >
       <div class="invalid-feedback">
           Pick a Time to raid !
         </div>
@@ -53,7 +53,7 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend3">+91</span>
         </div>
-        <input type="text" class="form-control " id="phoneno" placeholder="Phone number" aria-describedby="inputGroupPrepend3" required>
+        <input type="text" class="form-control " id="phoneno" placeholder="Phone number" aria-describedby="inputGroupPrepend3" >
         <div class="invalid-feedback">
           Please enter the phone.
         </div>
@@ -61,7 +61,8 @@
     </div>
   </div>
   <div class="button text-center">
-    <button class="btn btn-primary" type="button" {{on "click" this.james}}  >Book a Ride</button>
+    {{!-- template-lint-disable no-action --}}
+    <button class="btn btn-primary" type="submit"   >Book a Ride</button>
   </div>
 </form>
 <h1 class="text-success text-center mt-5 d-none success">Hurrah ! Get Ready to Raid </h1>

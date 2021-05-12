@@ -13,11 +13,19 @@
               </tr>
             </thead>
             <tbody class="raidreport">
+              {{!-- template-lint-disable no-unused-block-params --}}
+              {{!-- template-lint-disable no-implicit-this --}}
+             {{#each @result as |item index|}}
+                {{!-- template-lint-disable no-quoteless-attributes --}}
+                <Admin::Book @raid={{item}}
+                @value={{sum index}}></Admin::Book>
+             {{/each}}
                 
                 
               
             </tbody>
 
 </table>
+{{this.model}}
 
 {{yield}}

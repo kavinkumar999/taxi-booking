@@ -1,12 +1,12 @@
-import Model, { attr } from '@ember-data/model';
+import Model, { attr, belongsTo} from '@ember-data/model';
 
 export default class RaidModel extends Model {
-  @attr('customer') customer;
+  @belongsTo('customer') customer;
   @attr('string') from;
   @attr('string') to;
-  @attr('string') phone;
-  @attr('date') date;
-  @attr('time') time;
-  @attr('string') km;
-  @attr('string') amount;
+  @attr('number') phone;
+  @attr('string') date;
+  @attr('string') time;
+  @attr('number') km;
+  @attr('number') amount;
 }

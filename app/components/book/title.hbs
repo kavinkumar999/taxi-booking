@@ -9,3 +9,18 @@
 <div>
     <img src="back.jpg" alt="banner" height="500px" width="100%" >
 </div>
+{{#if @admin}}
+<div class="container d-flex justify-content-between">
+     <LinkTo @route="book" class="btn btn-secondary mr-3 mt-3" >Back</LinkTo>
+
+        
+     <LinkTo @route="admin" class="btn btn-primary mr-3 mt-3" >Admin</LinkTo>
+</div>
+{{else}}
+<div class="container d-flex justify-content-end">
+
+        
+     <LinkTo @route="admin" class="btn btn-primary mr-3 mt-3" >Admin</LinkTo>
+</div>
+    
+{{/if}}
