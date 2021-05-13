@@ -20,53 +20,37 @@ export default class BookController extends Controller {
     @action
     validate_form(event){
         event.preventDefault();
+        let value = $("input[name='image']:checked").val();
+        let fromcity = $("#fromcity")
+        let tocity = $("#tocity")
+        let phoneno = $("#phoneno")
+        let date = $("#date")
+        let time = $("#time")
+        fromcity.val() == "Select city" ? fromcity.addClass("is-invalid") : fromcity.removeClass("is-invalid")
+        tocity.val() == "Select city" ? tocity.addClass("is-invalid") : tocity.removeClass("is-invalid")
+        phoneno.val() == "" ? phoneno.addClass("is-invalid") : phoneno.removeClass("is-invalid")
+        date.val() == "" ? date.addClass("is-invalid") : date.removeClass("is-invalid")
+        time.val() == "" ? time.addClass("is-invalid") : time.removeClass("is-invalid")
 
-        // let fromcity = $("#fromcity")
-        // let tocity = $("#tocity")
-        // let phoneno = $("#phoneno")
-        // let date = $("#date")
-        // let time = $("#time")
-        // fromcity.val() == "Select city" ? fromcity.addClass("is-invalid") : fromcity.removeClass("is-invalid")
-        // tocity.val() == "Select city" ? tocity.addClass("is-invalid") : tocity.removeClass("is-invalid")
-        // phoneno.val() == "" ? phoneno.addClass("is-invalid") : phoneno.removeClass("is-invalid")
-        // date.val() == "" ? date.addClass("is-invalid") : date.removeClass("is-invalid")
-        // time.val() == "" ? time.addClass("is-invalid") : time.removeClass("is-invalid")
-       
+       let kilometer = Math.abs(fromcity.val().charCodeAt(0) - tocity.val().charCodeAt(0))
         
-        // if(fromcity.val() != "Select city" && fromcity.val() != "Select city" && phoneno.val() != "" && time.val() != "" && date.val() != "" ){
-        //     $(".success").removeClass("d-none")
-        //     let order = this.store.createRecord("raid",{
-        //         customer : "kavin",
-        //         from : fromcity.val(),
-        //         to : tocity.val(),
-        //         phone : phoneno.val(),
-        //         date : date.val(),
-        //         time : time.val(),
-        //         km : "5",
-        //         amount : "50"
+        if(fromcity.val() != "Select city" && tocity.val() != "Select city" && phoneno.val() != "" && time.val() != "" && date.val() != "" ){
+            $(".success").removeClass("d-none")
+            let order = this.store.createRecord("raid",{
+                customer : "admin",
+                from : fromcity.val(),
+                to : tocity.val(),
+                phone : phoneno.val(),
+                date : date.val(),
+                time : time.val(),
+                km :kilometer,
+                amount : kilometer * Number(value)
         
-        //     })
-        //     order.save().then(()=>{
-        //         console.log("success");
-        //         console.log(this.store.findAll("raid"));
-        //     })
-        let nane = this.store.query("customer").then(function(list) {
-            // console.log(list.content); 
-        
-            
-        })
-        console.log(nane); 
+            }).save()
+           
         
         
         
-        // nane.forEach(element => {
-        //     console.log("enter the password")
-        //     console.log(nane.username);
-        //     console.log(nane.pass);
-            
-        // });
-            // console.log(this.store.findAll("customer"));
-
-        // }
       }
+}
 }

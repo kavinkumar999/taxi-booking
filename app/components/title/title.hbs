@@ -1,5 +1,8 @@
-<h1 class="text-center text-light mt-5"><span class="text-warning">Taxi</span> Park</h1>
-<div class="buttons d-flex justify-content-end">
-    <LinkTo @route="book" type="button" class="btn btn-primary mr-2">Register</LinkTo>
-    <LinkTo @route="book" type="button" class="btn btn-primary mr-3">Login</LinkTo>
+<h1 class="text-center text-light mt-5 mb-3"><span class="text-warning">Taxi</span> Park</h1>
+<div class="buttons d-flex justify-content-start ml-5">
+    {{!-- template-lint-disable no-action --}}
+    <LinkTo type="button" @route="book" class="btn btn-primary mr-4" {{action "register"}}>Register</LinkTo>
+    {{!-- template-lint-disable no-action --}}
+    <LinkTo type="button"  @route="book" {{action "login"}} class="btn btn-primary mr-3">Login</LinkTo>
 </div>
+

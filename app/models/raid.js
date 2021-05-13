@@ -1,7 +1,7 @@
 import Model, { attr, belongsTo} from '@ember-data/model';
 
 export default class RaidModel extends Model {
-  @belongsTo('customer') customer;
+  @attr('string') customer;
   @attr('string') from;
   @attr('string') to;
   @attr('number') phone;
